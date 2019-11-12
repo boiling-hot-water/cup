@@ -1,2 +1,2 @@
 # cup
-Project to learn C and data structures
+This is project to learn C and data structures
