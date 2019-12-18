@@ -10,7 +10,7 @@
 #include "list.h"
 
 /*
-  Creates a new node of a double linked list with key
+  сreate a new node of a double linked list with key
 */
 struct node* node_new(int x) { 
 	struct node* node = (struct node*)malloc(sizeof(struct node)); //
@@ -21,7 +21,8 @@ struct node* node_new(int x) {
 }
 
 /*
-  create a struct list
+  create a struct list 
+  set the pointer NULL to the head and tail
 */
 struct list* list_new() {
 	struct list* list = (struct list*)malloc(sizeof(struct list));
@@ -32,6 +33,9 @@ struct list* list_new() {
 
 /*
    function deletes all elements in list
+   until we get to the end of the list, delete all elements
+   free memory
+   set the pointer NULL to the head and tail
 */
 void list_delete(struct list* list) {
 	struct node* node = list->head;
@@ -45,7 +49,10 @@ void list_delete(struct list* list) {
 }
 
 /*
-  function pushes an element to the end of list
+  function pushes an element to the end (tail) of list
+  if we don’t have a tail, then we return 1
+  create an element after tail
+  now this element is a tail and past tail is previous before current
 */
 int push(struct list* list, int x) {
 	if (list->tail == NULL) {
@@ -61,7 +68,12 @@ int push(struct list* list, int x) {
 }
 
 /*
-  
+  function pop extracts the last element in a list
+  if a tail of the list is empty, return 0
+  create a pointer to the tail value
+  if the list has just one element, free memory, delete elements
+  (if the tail is the head, then remove the head)
+  if the next element after this element is empty, that is, it is not there, then delete this element
 */
 int pop(struct list* list, int* px) {
 	if (list->tail == NULL)
@@ -83,7 +95,13 @@ int pop(struct list* list, int* px) {
 	return 1;
 }
 
-
+/*
+  function unshift adds an element to the beginning of the list
+  if a head of the list is empty, return 1
+  create an element of the structure
+  the next one is the head
+  now new element is the head
+*/
 int unshift(struct list* list, int x) {
 	if (list->head == NULL) {
 		list->head = node_new(x);
@@ -97,6 +115,15 @@ int unshift(struct list* list, int x) {
 	return 1;
 }
 
+/*
+  function shift retrieves the first element of a list
+  if a head of the list is empty, return 1
+  create a pointer to the head value 
+  if the list has just one element, free memory, delete elements
+  create a pointer to the next element after head
+  free memory of the current head
+  now head of the list is next after it
+*/
 int shift(struct list* list, int* px) {
 	if (list->head == NULL)
 		return 0;
@@ -117,6 +144,12 @@ int shift(struct list* list, int* px) {
 	return 1;
 }
 
+/*
+  function reverse inverts the list the link to which receives as an argument
+  create the pointer to the head of the list
+  create the pointer to the tail of the list
+  next element of the list becomes last
+*/
 void reverse(struct list* list) {
 	struct node* head = list->head;
 	struct node* tail = list->tail;
@@ -135,6 +168,9 @@ void reverse(struct list* list) {
 	}
 }
 
+/*
+  function list_print prints something like little dashes for the beauty
+*/
 void list_print(struct list* list) {
 	struct node* node = list->head;
 
