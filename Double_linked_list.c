@@ -9,14 +9,20 @@
 #include <stdlib.h>
 #include "list.h"
 
-struct node* node_new(int x) {
-	struct node* node = (struct node*)malloc(sizeof(struct node));
+/*
+  Creates a new node of a double linked list with key
+*/
+struct node* node_new(int x) { 
+	struct node* node = (struct node*)malloc(sizeof(struct node)); //
 	node->data = x;
 	node->next = NULL;
 	node->prev = NULL;
 	return node;
 }
 
+/*
+  create a struct list
+*/
 struct list* list_new() {
 	struct list* list = (struct list*)malloc(sizeof(struct list));
 	list->head = NULL;
@@ -24,6 +30,9 @@ struct list* list_new() {
 	return list;
 }
 
+/*
+   function deletes all elements in list
+*/
 void list_delete(struct list* list) {
 	struct node* node = list->head;
 	while (node) {
@@ -35,6 +44,9 @@ void list_delete(struct list* list) {
 	list->tail = NULL;
 }
 
+/*
+  function pushes an element to the end of list
+*/
 int push(struct list* list, int x) {
 	if (list->tail == NULL) {
 		list->head = node_new(x);
@@ -48,6 +60,9 @@ int push(struct list* list, int x) {
 	return 1;
 }
 
+/*
+  
+*/
 int pop(struct list* list, int* px) {
 	if (list->tail == NULL)
 		return 0;
@@ -67,6 +82,8 @@ int pop(struct list* list, int* px) {
 	list->tail = prev;
 	return 1;
 }
+
+
 int unshift(struct list* list, int x) {
 	if (list->head == NULL) {
 		list->head = node_new(x);
