@@ -27,7 +27,7 @@ Student 2 |	Route 2
 * First_project_1.0 - Single-linked list
 * Hash_map_1.0 - Hash map 
 * AVL_tree.c - realise AVL tree
-* AVL_tree.h - implementation AVL tree
+* AVL_tree.h - daclaration AVL tree
 
 ***
 **Licenses**
