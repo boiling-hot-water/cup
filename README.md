@@ -5,9 +5,9 @@ This is educational project to learn C and data structures at MIPT.
 ***
 **Authors**
 
-    Team Member 1 | Shapovalov Nikita
-------------------|-------------------
-    Team Member 1 | Arina Chumachenko
+Team Member 1 | Shapovalov Nikita
+--------------|-------------------
+Team Member 1 | Arina Chumachenko
 ***
 **Environment**
 ***
