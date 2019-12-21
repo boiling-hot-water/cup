@@ -18,6 +18,7 @@ Visual Studio 2019
 * sl_list.c - realise single-linked list
 * sl_list.h - implementation single-linked list
 * test.c - testing single-linked list
+* First_project_1.sln - solution single-linked list
 ***
 **Licenses**
 ***
