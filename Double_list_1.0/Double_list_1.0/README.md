@@ -18,7 +18,7 @@ Visual Studio 2019
 * double_list.c - realise and testing double-linked list
 * double_list.h - implementation double-linked list
 * task_1_4.c - realise task 1.4
-
+* main.c - realise the main programm
 ***
 **Licenses**
 ***
