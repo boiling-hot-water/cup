@@ -18,8 +18,8 @@ Visual Studio 2019
 * hash_map.c - realise hash map list
 * hash_map.h - implementation hash map list
 * test.c - testing hash map
-* First_project_1.0.sln - solution hash map list in external file (work)
-* First_project_1.0.vcxproj - project hash map list (maybe work)
+* Hash_map_1.0.sln - solution hash map list in external file (work)
+* Hash_map_1.0.vcxproj - project hash map list (maybe work)
 ***
 **Licenses**
 ***
