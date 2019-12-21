@@ -18,7 +18,6 @@ Visual Studio 2019
 Developer |	Task
 ----------|--------------
 Student 1 |	Route 1 
-----------|--------------
 Student 2 |	Route 2
 ***
 **Files**
