@@ -1,4 +1,4 @@
-#Binary tree
+**Binary tree**
 
 ***
 This is educational project to learn C and data structures at MIPT.
